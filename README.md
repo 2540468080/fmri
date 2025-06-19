@@ -14,7 +14,7 @@
   - 说明：存放组间统计分析（如t检验等）所得的结果文件。
 
 - **可视化结果导航页面**：
-  - 路径：`docs/index.html`链接"https://2540468080.github.io/fmri/docs/index.html"
+  - 路径：`docs/index.html`链接"https://2540468080.github.io/fmri"
   - 说明：本页面为fMRI分析结果的可视化导航入口，便于快速访问各类分析结果的可视化页面。
 
 - **viewer 与 v2 可视化工具**：
