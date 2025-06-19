@@ -1,0 +1,136 @@
+
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>独立样本T检验结果汇总</title>
+                <style>
+                    body { font-family: Arial, sans-serif; margin: 20px; }
+                    table { border-collapse: collapse; width: 100%; margin: 20px 0; font-size: 12px; }
+                    th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+                    th { background-color: #f2f2f2; font-weight: bold; }
+                    .metric-name { text-align: left; font-weight: bold; }
+                    .coordinates { text-align: left; font-size: 10px; max-width: 200px; word-wrap: break-word; }
+                    .significant { background-color: #e8f5e8; }
+                    .high-significance { background-color: #d4edda; }
+                    .effect-large { background-color: #ffebe6; }
+                    .effect-medium { background-color: #fff3e0; }
+                    .effect-small { background-color: #f9f9f9; }
+                    h1 { color: #333; text-align: center; }
+                    .summary { background-color: #f0f8ff; padding: 15px; margin: 20px 0; border-radius: 5px; }
+                    .stats-table { margin-top: 30px; }
+                    .stats-table th { background-color: #e9ecef; }
+                </style>
+            </head>
+            <body>
+                <h1>fMRI独立样本T检验结果汇总表</h1>
+                <div class="summary">
+                    <h3>分析说明：</h3>
+                    <ul>
+                        <li>比较抑郁组与健康对照组在四个脑功能指标上的差异</li>
+                        <li>统计方法：独立样本T检验（体素水平）</li>
+                        <li>显著性阈值：p ≤ 0.05（未校正）</li>
+                        <li>效应量：Cohen's d (小效应: 0.2, 中效应: 0.5, 大效应: 0.8)</li>
+                        <li>坐标系统：体素坐标 (x, y, z)</li>
+                    </ul>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>脑功能指标</th>
+                            <th>抑郁组<br>样本数</th>
+                            <th>对照组<br>样本数</th>
+                            <th>显著体素数</th>
+                            <th>抑郁组>对照组<br>体素数</th>
+                            <th>对照组>抑郁组<br>体素数</th>
+                            <th>最小P值</th>
+                            <th>平均P值</th>
+                            <th>最大效应量<br>(Cohen's d)</th>
+                            <th>平均效应量<br>(Cohen's d)</th>
+                            <th>显著体素<br>百分比(%)</th>
+                            <th>前5个显著坐标</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr class="significant effect-large">
+                            <td class="metric-name">ALFF (低频振幅)</td>
+                            <td>30</td>
+                            <td>21</td>
+                            <td>4,394</td>
+                            <td>2,435</td>
+                            <td>1,959</td>
+                            <td>N/A</td>
+                            <td>0.025668</td>
+                            <td>-1.5799</td>
+                            <td>0.0739</td>
+                            <td>3.01</td>
+                            <td class="coordinates">(1, 37, 19); (2, 42, 20); (2, 43, 21); (2, 46, 16); (3, 29, 20)</td>
+                        </tr>
+                
+                        <tr class="significant high-significance effect-large">
+                            <td class="metric-name">ReHo (局部一致性)</td>
+                            <td>30</td>
+                            <td>21</td>
+                            <td>4,618</td>
+                            <td>1,276</td>
+                            <td>3,342</td>
+                            <td>8.3e-05</td>
+                            <td>0.027417</td>
+                            <td>1.2255</td>
+                            <td>-0.2404</td>
+                            <td>3.17</td>
+                            <td class="coordinates">(2, 43, 19); (2, 44, 19); (3, 35, 20); (3, 41, 17); (3, 52, 20)</td>
+                        </tr>
+                
+                        <tr class="significant high-significance effect-large">
+                            <td class="metric-name">PCC种子连接</td>
+                            <td>30</td>
+                            <td>21</td>
+                            <td>5,502</td>
+                            <td>3,483</td>
+                            <td>2,019</td>
+                            <td>4.5e-05</td>
+                            <td>0.026332</td>
+                            <td>-1.3135</td>
+                            <td>0.1748</td>
+                            <td>3.77</td>
+                            <td class="coordinates">(0, 49, 20); (0, 55, 20); (1, 29, 19); (1, 31, 19); (1, 34, 23)</td>
+                        </tr>
+                
+                        <tr class="significant high-significance effect-large">
+                            <td class="metric-name">mPFC种子连接</td>
+                            <td>30</td>
+                            <td>21</td>
+                            <td>5,885</td>
+                            <td>1,776</td>
+                            <td>4,109</td>
+                            <td>4e-05</td>
+                            <td>0.025849</td>
+                            <td>-1.2506</td>
+                            <td>-0.2776</td>
+                            <td>4.03</td>
+                            <td class="coordinates">(0, 38, 15); (0, 47, 14); (0, 47, 15); (0, 48, 14); (0, 48, 15)</td>
+                        </tr>
+                
+                    </tbody>
+                </table>
+
+                <div class="summary">
+                    <h3>结果解释：</h3>
+                    <ul>
+                        <li><strong>显著体素数：</strong>在该指标上两组间存在显著差异的脑体素数量</li>
+                        <li><strong>抑郁组>对照组：</strong>抑郁组数值显著大于对照组的体素数</li>
+                        <li><strong>对照组>抑郁组：</strong>对照组数值显著大于抑郁组的体素数</li>
+                        <li><strong>最小P值：</strong>所有显著体素中最小的p值</li>
+                        <li><strong>平均P值：</strong>所有显著体素的平均p值</li>
+                        <li><strong>最大效应量：</strong>所有显著体素中效应量最大的Cohen's d值</li>
+                        <li><strong>平均效应量：</strong>所有显著体素的平均Cohen's d值</li>
+                        <li><strong>显著体素百分比：</strong>显著体素占全脑体素的比例</li>
+                        <li><strong>前5个显著坐标：</strong>按p值排序的前5个显著体素坐标</li>
+                    </ul>
+                    <p><strong>注意：</strong>详细的显著体素信息（包括所有坐标、p值、效应量）保存在对应的CSV文件中。</p>
+                </div>
+            </body>
+            </html>
+            
