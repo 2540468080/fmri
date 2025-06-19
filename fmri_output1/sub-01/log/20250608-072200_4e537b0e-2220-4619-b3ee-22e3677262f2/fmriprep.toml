@@ -1,0 +1,93 @@
+[environment]
+cpu_count = 16
+exec_env = "singularity"
+free_mem = 12.5
+overcommit_policy = "always"
+overcommit_limit = "50%"
+nipype_version = "1.10.0"
+templateflow_version = "24.2.2"
+version = "25.1.1"
+
+[execution]
+bids_dir = "/data"
+bids_database_dir = "/tmp/work/20250608-072200_4e537b0e-2220-4619-b3ee-22e3677262f2/bids_db"
+bids_description_hash = "0a68584dc377df6567986eb26f57a24e244e5af8961d385bf3e38d37f6c441ea"
+boilerplate_only = false
+sloppy = false
+debug = []
+fmriprep_dir = "/out"
+fs_license_file = "/fs/license.txt"
+fs_subjects_dir = "/out/sourcedata/freesurfer"
+layout = "BIDS Layout: .../data | Subjects: 30 | Sessions: 0 | Runs: 0"
+log_dir = "/out/logs"
+log_level = 25
+low_mem = false
+md_only_boilerplate = false
+notrack = false
+track_carbon = false
+country_code = "CAN"
+output_dir = "/out"
+me_output_echos = false
+aggr_ses_reports = 4
+output_layout = "bids"
+output_spaces = "MNI152NLin2009cAsym:res-native"
+reports_only = false
+run_uuid = "20250608-072200_4e537b0e-2220-4619-b3ee-22e3677262f2"
+participant_label = [ "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30",]
+templateflow_home = "/home/fmriprep/.cache/templateflow"
+work_dir = "/tmp/work"
+write_graph = false
+
+[workflow]
+anat_only = false
+bold2anat_dof = 6
+bold2anat_init = "t1w"
+cifti_output = false
+fmap_bspline = false
+force_syn = false
+hires = true
+fs_no_resume = false
+ignore = []
+force = []
+level = "full"
+longitudinal = false
+run_msmsulc = true
+medial_surface_nan = false
+project_goodvoxels = false
+regressors_all_comps = false
+regressors_dvars_th = 1.5
+regressors_fd_th = 0.5
+run_reconall = true
+skull_strip_fixed_seed = false
+skull_strip_template = "OASIS30ANTs"
+skull_strip_t1w = "force"
+slice_time_ref = 0.5
+spaces = "MNI152NLin2009cAsym:res-native"
+use_syn_sdc = false
+me_t2s_fit_method = "curvefit"
+
+[nipype]
+crashfile_format = "txt"
+get_linked_libs = false
+memory_gb = 14.0
+nprocs = 16
+omp_nthreads = 4
+plugin = "MultiProc"
+remove_unnecessary_outputs = true
+resource_monitor = false
+stop_on_first_crash = false
+
+[seeds]
+master = 29582
+ants = 54036
+numpy = 35036
+
+[execution.derivatives]
+
+[execution.dataset_links]
+raw = "/data"
+templateflow = "/home/fmriprep/.cache/templateflow"
+
+[nipype.plugin_args]
+maxtasksperchild = 1
+raise_insufficient = false
